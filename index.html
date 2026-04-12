@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basis Sarana Solusindo (BSS) - Spesialis penjualan dan instalasi CCTV, Barrier Gate, GPS Tracker, dan Sliding Gate. Solusi keamanan terpercaya untuk rumah dan bisnis Anda.">
+    <meta name="keywords" content="CCTV, Barrier Gate, GPS Tracker, Sliding Gate, instalasi, keamanan, BSS, Basis Sarana Solusindo">
+    <meta name="author" content="Basis Sarana Solusindo">
+    <title>BSS - Basis Sarana Solusindo | CCTV & Automatic Gate</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="logo.jpg.jpeg" alt="BSS Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">BSS</span>
+                    <span class="logo-subtitle">Basis Sarana Solusindo</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#produk" class="nav-link" data-section="produk">Produk</a></li>
+                <li><a href="#testimoni" class="nav-link" data-section="testimoni">Testimoni</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li id="adminNavLi" style="display:none;">
+                    <a href="#" class="nav-link nav-admin-btn" id="adminLoginBtn">
+                        <i class="fas fa-cogs"></i> Admin Panel
+                    </a>
+                </li>
+            </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SLIDER ========== -->
+    <section class="hero" id="home">
+        <div class="slider" id="heroSlider">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <!-- Slides injected by JS -->
+            </div>
+            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" id="sliderNext" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUK ========== -->
+    <section class="section produk-section" id="produk">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Produk Kami</span>
+                <h2 class="section-title">Solusi Keamanan <span class="text-accent">Terbaik</span></h2>
+                <p class="section-desc">Kami menyediakan berbagai produk keamanan berkualitas tinggi untuk melindungi properti Anda</p>
+            </div>
+            <div class="produk-grid" id="produkGrid">
+                <!-- Product cards injected by JS -->
+            </div>
+            <div class="produk-empty" id="produkEmpty" style="display:none;">
+                <i class="fas fa-box-open"></i>
+                <p>Belum ada produk yang tersedia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONI / PORTOFOLIO ========== -->
+    <section class="section testimoni-section" id="testimoni">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Portofolio</span>
+                <h2 class="section-title">Hasil <span class="text-accent">Instalasi</span> Kami</h2>
+                <p class="section-desc">Dokumentasi proyek instalasi yang telah kami selesaikan dengan standar profesional</p>
+            </div>
+            <div class="testimoni-carousel-wrapper">
+                <div class="testimoni-carousel" id="testimoniCarousel">
+                    <!-- Portfolio images injected by JS -->
+                </div>
+            </div>
+            <div class="testimoni-empty" id="testimoniEmpty" style="display:none;">
+                <i class="fas fa-images"></i>
+                <p>Belum ada foto portofolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Hubungi Kami</span>
+                <h2 class="section-title">Mari <span class="text-accent">Terhubung</span></h2>
+                <p class="section-desc">Konsultasikan kebutuhan keamanan Anda bersama kami</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Social Media Cards -->
+                <div class="contact-socials animate-on-scroll">
+                    <h3 class="contact-socials-title">Temukan Kami</h3>
+                    <div class="social-cards">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="social-card whatsapp" id="socialWhatsApp">
+                            <div class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-name">WhatsApp</span>
+                                <span class="social-handle">+62 812-3456-7890</span>
+                            </div>
+                            <i class="fas fa-arrow-right social-arrow"></i>
+                        </a>
+                        <a href="https://tiktok.com/@bss_official" target="_blank" class="social-card tiktok" id="socialTikTok">
+                            <div class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-name">TikTok</span>
+                                <span class="social-handle">@bss_official</span>
+                            </div>
+                            <i class="fas fa-arrow-right social-arrow"></i>
+                        </a>
+                        <a href="https://instagram.com/bss_official" target="_blank" class="social-card instagram" id="socialInstagram">
+                            <div class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-name">Instagram</span>
+                                <span class="social-handle">@bss_official</span>
+                            </div>
+                            <i class="fas fa-arrow-right social-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <h3 class="contact-form-title">Kirim Pesan</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="contactName" class="form-input" placeholder=" " required>
+                            <label for="contactName" class="form-label">Nama Lengkap</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" class="form-input form-textarea" placeholder=" " required rows="4"></textarea>
+                            <label for="contactMessage" class="form-label">Pesan / Pertanyaan</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="contactSubmit">
+                            <i class="fab fa-whatsapp"></i>
+                            Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.jpg.jpeg" alt="BSS Logo" class="footer-logo">
+                    <p class="footer-desc">Solusi keamanan terpercaya untuk rumah dan bisnis Anda. Melayani penjualan dan instalasi CCTV, Barrier Gate, GPS Tracker, dan Sliding Gate.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="#home">Home</a>
+                    <a href="#produk">Produk</a>
+                    <a href="#testimoni">Portofolio</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <a href="#produk">CCTV</a>
+                    <a href="#produk">Barrier Gate</a>
+                    <a href="#produk">GPS Tracker</a>
+                    <a href="#produk">Sliding Gate</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Basis Sarana Solusindo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== ADMIN LOGIN MODAL ========== -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" id="loginModalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h2>Admin Login</h2>
+                <p>Masukkan kredensial untuk mengakses panel admin</p>
+            </div>
+            <form class="modal-form" id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="loginUsername" class="form-input" placeholder=" " required autocomplete="username">
+                    <label for="loginUsername" class="form-label">Username</label>
+                    <div class="form-line"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" class="form-input" placeholder=" " required autocomplete="current-password">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <div class="form-line"></div>
+                </div>
+                <div class="login-error" id="loginError" style="display:none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Username atau password salah!</span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Masuk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== ADMIN PANEL ========== -->
+    <div class="admin-panel" id="adminPanel" style="display:none;">
+        <div class="admin-header">
+            <div class="admin-header-left">
+                <h2><i class="fas fa-cogs"></i> Admin Panel</h2>
+                <span class="admin-badge">BSS Dashboard</span>
+            </div>
+            <div class="admin-header-right">
+                <a href="#" class="btn btn-outline btn-sm" id="adminBackToSite">
+                    <i class="fas fa-globe"></i> Lihat Website
+                </a>
+                <button class="btn btn-danger btn-sm" id="adminLogout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="admin-container">
+            <!-- Admin Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="slider-tab">
+                    <i class="fas fa-images"></i> Slider
+                </button>
+                <button class="admin-tab" data-tab="produk-tab">
+                    <i class="fas fa-box"></i> Produk
+                </button>
+                <button class="admin-tab" data-tab="portfolio-tab">
+                    <i class="fas fa-camera"></i> Portofolio
+                </button>
+                <button class="admin-tab" data-tab="settings-tab">
+                    <i class="fas fa-sliders"></i> Pengaturan
+                </button>
+            </div>
+
+            <!-- Tab: Slider Management -->
+            <div class="admin-tab-content active" id="slider-tab">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-plus-circle"></i> Tambah Slider</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="upload-zone" id="sliderUploadZone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop gambar di sini atau</p>
+                            <label class="btn btn-outline btn-sm upload-btn">
+                                <i class="fas fa-folder-open"></i> Pilih File
+                                <input type="file" id="sliderFileInput" accept="image/*" hidden>
+                            </label>
+                            <span class="upload-hint">Format: JPG, PNG, WebP (Max 2MB)</span>
+                        </div>
+                        <div class="upload-preview" id="sliderUploadPreview" style="display:none;">
+                            <img id="sliderPreviewImg" src="" alt="Preview">
+                            <div class="upload-preview-actions">
+                                <button class="btn btn-primary btn-sm" id="sliderSaveBtn">
+                                    <i class="fas fa-save"></i> Simpan
+                                </button>
+                                <button class="btn btn-outline btn-sm" id="sliderCancelBtn">
+                                    <i class="fas fa-times"></i> Batal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-th-list"></i> Daftar Slider</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="admin-grid" id="adminSliderGrid">
+                            <!-- Slider items injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Product Management -->
+            <div class="admin-tab-content" id="produk-tab">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-plus-circle"></i> Tambah Produk</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <form id="addProductForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="productName" class="form-input" placeholder=" " required>
+                                    <label for="productName" class="form-label">Nama Produk</label>
+                                    <div class="form-line"></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <textarea id="productDesc" class="form-input form-textarea" placeholder=" " required rows="3"></textarea>
+                                    <label for="productDesc" class="form-label">Deskripsi Singkat</label>
+                                    <div class="form-line"></div>
+                                </div>
+                            </div>
+                            <div class="upload-zone" id="productUploadZone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Upload foto produk</p>
+                                <label class="btn btn-outline btn-sm upload-btn">
+                                    <i class="fas fa-folder-open"></i> Pilih File
+                                    <input type="file" id="productFileInput" accept="image/*" hidden>
+                                </label>
+                            </div>
+                            <div class="upload-preview" id="productUploadPreview" style="display:none;">
+                                <img id="productPreviewImg" src="" alt="Preview">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Tambah Produk
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-th-list"></i> Daftar Produk</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="admin-grid" id="adminProdukGrid">
+                            <!-- Product items injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Portfolio Management -->
+            <div class="admin-tab-content" id="portfolio-tab">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-plus-circle"></i> Tambah Foto Portofolio</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="upload-zone" id="portfolioUploadZone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Upload foto hasil instalasi</p>
+                            <label class="btn btn-outline btn-sm upload-btn">
+                                <i class="fas fa-folder-open"></i> Pilih File
+                                <input type="file" id="portfolioFileInput" accept="image/*" hidden multiple>
+                            </label>
+                            <span class="upload-hint">Bisa pilih beberapa file sekaligus</span>
+                        </div>
+                        <div class="upload-preview-multi" id="portfolioUploadPreview" style="display:none;">
+                            <!-- Multi preview injected by JS -->
+                        </div>
+                        <button class="btn btn-primary" id="portfolioSaveBtn" style="display:none;">
+                            <i class="fas fa-save"></i> Simpan Semua
+                        </button>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-th-list"></i> Galeri Portofolio</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="admin-grid" id="adminPortfolioGrid">
+                            <!-- Portfolio items injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Settings -->
+            <div class="admin-tab-content" id="settings-tab">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-phone"></i> Pengaturan WhatsApp</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <form id="settingsForm" class="admin-form">
+                            <div class="form-group">
+                                <input type="text" id="settingsWhatsApp" class="form-input" placeholder=" " required>
+                                <label for="settingsWhatsApp" class="form-label">Nomor WhatsApp (cth: 6281234567890)</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="settingsTikTok" class="form-input" placeholder=" ">
+                                <label for="settingsTikTok" class="form-label">Username TikTok (cth: @bss_official)</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="settingsInstagram" class="form-input" placeholder=" ">
+                                <label for="settingsInstagram" class="form-label">Username Instagram (cth: @bss_official)</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Simpan Pengaturan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Ubah Kredensial Admin -->
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3><i class="fas fa-user-shield"></i> Ubah Username & Password</h3>
+                    </div>
+                    <div class="admin-card-body">
+                        <form id="credentialsForm" class="admin-form">
+                            <div class="form-group">
+                                <input type="password" id="credCurrentPassword" class="form-input" placeholder=" " required>
+                                <label for="credCurrentPassword" class="form-label">Password Saat Ini</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="credNewUsername" class="form-input" placeholder=" " required autocomplete="off">
+                                <label for="credNewUsername" class="form-label">Username Baru</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="credNewPassword" class="form-input" placeholder=" " autocomplete="new-password">
+                                <label for="credNewPassword" class="form-label">Password Baru (kosongkan jika tidak diubah)</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="credConfirmPassword" class="form-input" placeholder=" " autocomplete="new-password">
+                                <label for="credConfirmPassword" class="form-label">Konfirmasi Password Baru</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-key"></i> Perbarui Kredensial
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== IMAGE LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="Preview" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
