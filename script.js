@@ -11,10 +11,10 @@ const CONFIG = {
         password: 'admin1234'
     },
     // Default WhatsApp number
-    defaultWhatsApp: '6281234567890',
+    defaultWhatsApp: '6282185690311',
     // Default social media
-    defaultTikTok: '@bss_official',
-    defaultInstagram: '@bss_official',
+    defaultTikTok: '@cctvautogatelampung',
+    defaultInstagram: '@basis_cctvautogatelampung',
     // Slider auto-play interval (ms)
     sliderInterval: 4000,
     // Testimonial carousel speed
@@ -22,9 +22,9 @@ const CONFIG = {
     // localStorage keys
     keys: {
         products: 'bss_products',
-        sliders: 'bss_sliders',
-        portfolio: 'bss_portfolio',
-        settings: 'bss_settings',
+        sliders: 'bss_sliders_v11',
+        portfolio: 'bss_portfolio_v2',
+        settings: 'bss_settings_v2',
         credentials: 'bss_admin_credentials',
         isLoggedIn: 'bss_admin_logged'
     }
@@ -103,18 +103,27 @@ const DataManager = {
             ]);
         }
 
-        // Default sliders (using local assets)
+        // Default sliders
         if (!this.get(CONFIG.keys.sliders)) {
             this.set(CONFIG.keys.sliders, [
-                { id: 1, image: 'assets/banner1.png' },
-                { id: 2, image: 'assets/banner2.png' },
-                { id: 3, image: 'assets/banner3.png' }
+                { id: 1, image: 'foto/atas/Screenshot 2026-04-14 213633.png' }
             ]);
         }
 
         // Default portfolio
         if (!this.get(CONFIG.keys.portfolio)) {
-            this.set(CONFIG.keys.portfolio, []);
+            this.set(CONFIG.keys.portfolio, [
+                { id: 1, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 15.57.26 (1).jpeg' },
+                { id: 2, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 15.57.27.jpeg' },
+                { id: 3, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.41.jpeg' },
+                { id: 4, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.42.jpeg' },
+                { id: 5, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.43.jpeg' },
+                { id: 6, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.44.jpeg' },
+                { id: 7, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.45.jpeg' },
+                { id: 8, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.48.jpeg' },
+                { id: 9, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.49.jpeg' },
+                { id: 10, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.50.jpeg' }
+            ]);
         }
 
         // Default settings
@@ -336,7 +345,7 @@ function renderSlider() {
 
     wrapper.innerHTML = sliders.map((slide, i) => `
         <div class="slider-slide">
-            <img src="${slide.image}" alt="Banner ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}">
+            <img src="${slide.image}" class="slider-fg" alt="Banner ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}">
         </div>
     `).join('');
 
@@ -388,43 +397,224 @@ function resetSliderAutoPlay() {
 }
 
 // ========== PRODUCTS ==========
+const staticBrandsData = [
+    {
+        id: 'hilook',
+        name: 'HiLook',
+        description: 'Sistem CCTV terjangkau dan berkualitas',
+        image: 'foto/logo/hilook_logo.png',
+        packages: [
+            {
+                name: 'Paket CCTV 4CH HiLook',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Kamera pengawas HiLook untuk ruangan atau luar ruangan.\n\nTermasuk:\n- 4x Kamera (Bisa Indoor / Outdoor)\n- 1x DVR 4 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/hilook/4ch.jpeg'
+            },
+            {
+                name: 'Paket CCTV 8CH HiLook',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Kamera pengawas HiLook skala menengah.\n\nTermasuk:\n- 8x Kamera (Bisa Indoor / Outdoor)\n- 1x DVR 8 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/hilook/8ch.webp'
+            },
+            {
+                name: 'Paket CCTV 16CH HiLook',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Solusi keamanan maksimal dengan HiLook.\n\nTermasuk:\n- 16x Kamera (Bisa Indoor / Outdoor)\n- 1x DVR 16 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/hilook/16ch.webp'
+            },
+            {
+                name: 'Paket Custom HiLook',
+                desc: 'Atau Sesuai Kebutuhan',
+                detail: 'Solusi keamanan bisa disesuaikan dengan kebutuhan Anda.\n\nSilakan konsultasi dengan kami untuk menentukan jumlah kamera dan spesifikasi yang tepat (tersedia 2MP, 5MP, dll).',
+                price: '',
+                image: ''
+            }
+        ]
+    },
+    {
+        id: 'hikvision',
+        name: 'Hikvision',
+        description: 'Teknologi CCTV No. 1 di dunia',
+        image: 'foto/logo/hikvis.png',
+        packages: [
+            {
+                name: 'Paket CCTV 4CH Hikvision',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Paket teknologi dari inovator CCTV Hikvision.\n\nTermasuk:\n- 4x Kamera Hikvision (Indoor / Outdoor)\n- 1x DVR 4 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/hikvision/4ch.jpeg'
+            },
+            {
+                name: 'Paket CCTV 8CH Hikvision',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Paket keamanan Hikvision untuk kebutuhan lebih luas.\n\nTermasuk:\n- 8x Kamera Hikvision (Indoor / Outdoor)\n- 1x DVR 8 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: ''
+            },
+            {
+                name: 'Paket CCTV 16CH Hikvision',
+                desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
+                detail: 'Paket komprehensif Hikvision skala besar.\n\nTermasuk:\n- 16x Kamera Hikvision (Indoor / Outdoor)\n- 1x DVR 16 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
+                price: '',
+                image: ''
+            },
+            {
+                name: 'Paket Custom Hikvision',
+                desc: 'Atau Sesuai Kebutuhan',
+                detail: 'Dapatkan konfigurasi kamera Hikvision yang sesuai dengan persis apa yang Anda inginkan (jumlah custom, spesifikasi 2MP / 5MP).',
+                price: '',
+                image: ''
+            }
+        ]
+    },
+    {
+        id: 'tiandy',
+        name: 'Tiandy',
+        description: 'Inovasi CCTV IP dengan kejernihan maksimal',
+        image: 'foto/logo/tiandy.png',
+        packages: [
+            {
+                name: 'Paket CCTV IP Tiandy Sound 2MP 4CH',
+                desc: 'IP Camera 4 Channel dengan Audio',
+                detail: 'Kualitas gambar dan audio jernih melalui jaringan IP.\n\nTermasuk:\n- 4x IP Camera Tiandy Sound 2MP\n- 1x NVR 4 Channel\n- Kelengkapan Instalasi\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/tiandy/ip4ch.jpeg'
+            },
+            {
+                name: 'Paket CCTV IP Tiandy Sound 2MP 8CH',
+                desc: 'IP Camera 8 Channel dengan Audio',
+                detail: 'Cakupan ekstra IP Camera Tiandy dengan Audio terintegrasi.\n\nTermasuk:\n- 8x IP Camera Tiandy Sound 2MP\n- 1x NVR 8 Channel\n- Kelengkapan Instalasi\n- Termasuk Pemasangan',
+                price: '',
+                image: 'foto/produk/tiandy/ip 8ch.jpeg'
+            },
+            {
+                name: 'Paket Custom Tiandy',
+                desc: 'Atau Sesuai Kebutuhan',
+                detail: 'Untuk kebutuhan sistem CCTV IP Tiandy dalam skala jumlah berbeda (di atas 8CH atau kurang), silakan hubungi kami.',
+                price: '',
+                image: ''
+            }
+        ]
+    },
+    {
+        id: 'barrier_gate',
+        name: 'Barrier Gate',
+        description: 'Sistem Barrier Gate otomatis untuk parkir dan gerbang',
+        image: 'foto/barrier gate/barier.jpeg',
+        isDirectWa: true,
+        packages: []
+    },
+    {
+        id: 'sliding_gate',
+        name: 'Sliding Gate',
+        description: 'Mesin Sliding Gate otomatis kapasitas besar',
+        image: 'foto/barrier gate/sliding.jpeg',
+        isDirectWa: true,
+        packages: []
+    }
+];
+
 function renderProducts() {
-    const products = DataManager.get(CONFIG.keys.products) || [];
+    renderBrands();
+}
+
+function renderBrands() {
     const grid = document.getElementById('produkGrid');
     const empty = document.getElementById('produkEmpty');
-
-    if (products.length === 0) {
-        grid.style.display = 'none';
-        empty.style.display = 'block';
-        return;
-    }
 
     grid.style.display = 'grid';
     empty.style.display = 'none';
 
-    grid.innerHTML = products.map((product, index) => `
+    grid.innerHTML = staticBrandsData.map((brand, index) => `
         <div class="produk-card" style="transition-delay: ${index * 0.08}s">
             <div class="produk-card-img">
-                ${product.image
-                    ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
-                    : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);color:#9ca3af;">
-                        <i class="fas fa-camera" style="font-size:2.5rem;"></i>
-                       </div>`
-                }
+                <img src="${brand.image}" alt="${brand.name}" loading="lazy">
             </div>
             <div class="produk-card-body">
-                <h3 class="produk-card-name">${escapeHtml(product.name)}</h3>
-                <p class="produk-card-desc">${escapeHtml(product.description)}</p>
+                <h3 class="produk-card-name">${escapeHtml(brand.name)}</h3>
+                <p class="produk-card-desc">${escapeHtml(brand.description)}</p>
             </div>
             <div class="produk-card-footer">
-                <button class="btn btn-whatsapp" onclick="askProduct('${escapeHtml(product.name)}')">
-                    <i class="fab fa-whatsapp"></i> Tanya Produk
+                ${brand.isDirectWa
+            ? `<button class="btn btn-whatsapp" onclick="askBrandWA('${escapeHtml(brand.name)}')" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Hubungi WA
+                       </button>`
+            : `<button class="btn btn-primary" onclick="showPackages('${brand.id}')" style="width: 100%;">
+                        <i class="fas fa-list"></i> Lihat Paket
+                       </button>`
+        }
+            </div>
+        </div>
+    `).join('');
+
+    observeCards(grid);
+}
+
+function askBrandWA(brandName) {
+    const message = `Halo BSS! Saya tertarik dan ingin bertanya tentang produk *${brandName}*. Bisa tolong berikan informasi lebih lanjut?`;
+    openWhatsApp(message);
+}
+
+function showPackages(brandId) {
+    const brand = staticBrandsData.find(b => b.id === brandId);
+    if (!brand) return;
+
+    const grid = document.getElementById('produkGrid');
+
+    let html = `
+        <div style="grid-column: 1 / -1; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
+            <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--color-dark);"><i class="fas fa-tag"></i> Paket ${brand.name}</h3>
+            <button class="btn btn-outline btn-sm" onclick="renderBrands()">
+                <i class="fas fa-arrow-left"></i> Kembali ke Merek
+            </button>
+        </div>
+    `;
+
+    html += brand.packages.map((pkg, index) => `
+        <div class="produk-card" style="transition-delay: ${index * 0.08}s">
+            ${pkg.image ? `<div class="produk-card-img"><img src="${pkg.image}" alt="${pkg.name}" loading="lazy"></div>` : ''}
+            <div class="produk-card-body">
+                <h3 class="produk-card-name">${escapeHtml(pkg.name)}</h3>
+                ${pkg.price ? `<p class="text-accent" style="font-weight: bold; margin-bottom: 0.5rem; font-size: 1.1rem;">${escapeHtml(pkg.price)}</p>` : ''}
+                <p class="produk-card-desc">${escapeHtml(pkg.desc)}</p>
+            </div>
+            <div class="produk-card-footer">
+                <button class="btn btn-outline" style="width: 100%; border-color: var(--color-accent); color: var(--color-accent);" onclick="showPackageDetail('${encodeURIComponent(JSON.stringify(pkg))}')">
+                    <i class="fas fa-info-circle"></i> Lihat Detail
                 </button>
             </div>
         </div>
     `).join('');
 
-    // Animate cards on scroll
+    grid.innerHTML = html;
+
+    // Scroll a bit up to see the title clearly
+    document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
+    observeCards(grid);
+}
+
+function showPackageDetail(pkgJson) {
+    const pkg = JSON.parse(decodeURIComponent(pkgJson));
+    const modal = document.getElementById('packageModal');
+
+    document.getElementById('modalPackageName').innerText = pkg.name;
+    document.getElementById('modalPackagePrice').innerText = pkg.price || '';
+    document.getElementById('modalPackageDetail').innerText = pkg.detail;
+
+    const waBtn = document.getElementById('modalPackageWaBtn');
+    waBtn.onclick = () => {
+        const priceText = pkg.price ? ` (${pkg.price})` : '';
+        const message = `Halo BSS! Saya tertarik dan ingin bertanya tentang *${pkg.name}*${priceText}. Bisa tolong berikan informasi lebih lanjut?`;
+        openWhatsApp(message);
+    };
+
+    modal.classList.add('active');
+}
+
+function observeCards(grid) {
     setTimeout(() => {
         const cards = grid.querySelectorAll('.produk-card');
         const observer = new IntersectionObserver((entries) => {
@@ -644,7 +834,7 @@ function initAdmin() {
     const secretTrigger = document.querySelector('.footer-bottom');
     let secretClicks = 0;
     let secretTimer;
-    
+
     secretTrigger.style.cursor = 'pointer'; // Optional hint
     secretTrigger.addEventListener('click', () => {
         secretClicks++;
@@ -972,9 +1162,9 @@ function renderAdminProducts() {
     grid.innerHTML = products.map(product => `
         <div class="admin-grid-item">
             ${product.image
-                ? `<img src="${product.image}" alt="${escapeHtml(product.name)}">`
-                : `<div style="width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#f3f4f6;color:#9ca3af;"><i class="fas fa-camera" style="font-size:1.5rem;"></i></div>`
-            }
+            ? `<img src="${product.image}" alt="${escapeHtml(product.name)}">`
+            : `<div style="width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#f3f4f6;color:#9ca3af;"><i class="fas fa-camera" style="font-size:1.5rem;"></i></div>`
+        }
             <div class="admin-grid-item-info">
                 <h4>${escapeHtml(product.name)}</h4>
                 <p>${escapeHtml(product.description)}</p>
@@ -1213,6 +1403,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     renderTestimoniCarousel();
     initLightbox();
+    initPackageModal();
     initContactForm();
     initScrollAnimations();
     initAdmin();
@@ -1223,6 +1414,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') {
             document.getElementById('loginModal').classList.remove('active');
             document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('packageModal')?.classList.remove('active');
         }
     });
 });
+
+function initPackageModal() {
+    const modal = document.getElementById('packageModal');
+    const closeBtn = document.getElementById('packageModalClose');
+
+    if (!modal || !closeBtn) return;
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+}

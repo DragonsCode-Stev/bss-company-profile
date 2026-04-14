@@ -204,6 +204,28 @@
         </div>
     </footer>
 
+    <!-- ========== PACKAGE DETAIL MODAL ========== -->
+    <div class="modal-overlay" id="packageModal">
+        <div class="modal package-modal">
+            <button class="modal-close" id="packageModalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h2 id="modalPackageName">Nama Paket</h2>
+                <p id="modalPackagePrice" class="text-accent" style="font-weight: bold; font-size: 1.2rem;">Harga</p>
+            </div>
+            <div class="modal-body" style="padding: 0 2rem 2rem; white-space: pre-line; color: var(--color-text-light);" id="modalPackageDetail">
+                Detail akan muncul di sini...
+            </div>
+            <div class="modal-footer" style="padding: 0 2rem 2rem;">
+                <button class="btn btn-whatsapp btn-full" id="modalPackageWaBtn">
+                    <i class="fab fa-whatsapp"></i> Tanya di WA
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== ADMIN LOGIN MODAL ========== -->
     <div class="modal-overlay" id="loginModal">
         <div class="modal">
