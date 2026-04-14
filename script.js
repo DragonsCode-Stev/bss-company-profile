@@ -452,14 +452,14 @@ const staticBrandsData = [
                 desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
                 detail: 'Paket keamanan Hikvision untuk kebutuhan lebih luas.\n\nTermasuk:\n- 8x Kamera Hikvision (Indoor / Outdoor)\n- 1x DVR 8 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
                 price: '',
-                image: ''
+                image: 'foto/produk/hikvision/8mp.avif'
             },
             {
                 name: 'Paket CCTV 16CH Hikvision',
                 desc: 'Tersedia pilihan resolusi 2MP atau 5MP',
                 detail: 'Paket komprehensif Hikvision skala besar.\n\nTermasuk:\n- 16x Kamera Hikvision (Indoor / Outdoor)\n- 1x DVR 16 Channel\n- Kelengkapan Instalasi (Harddisk, Kabel, dll)\n- Termasuk Pemasangan',
                 price: '',
-                image: ''
+                image: 'foto/produk/hikvision/16ch.jpeg'
             },
             {
                 name: 'Paket Custom Hikvision',
