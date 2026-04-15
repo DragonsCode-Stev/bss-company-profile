@@ -22,7 +22,7 @@ const CONFIG = {
     // localStorage keys
     keys: {
         products: 'bss_products',
-        sliders: 'bss_sliders_v11',
+        sliders: 'bss_sliders_v12',
         portfolio: 'bss_portfolio_v2',
         settings: 'bss_settings_v2',
         credentials: 'bss_admin_credentials',
@@ -106,7 +106,7 @@ const DataManager = {
         // Default sliders
         if (!this.get(CONFIG.keys.sliders)) {
             this.set(CONFIG.keys.sliders, [
-                { id: 1, image: 'foto/atas/Screenshot 2026-04-14 213633.png' }
+                { id: 1, image: 'foto/atas/WhatsApp Image 2026-04-15 at 20.44.42.jpeg' }
             ]);
         }
 
@@ -512,6 +512,22 @@ const staticBrandsData = [
         name: 'Sliding Gate',
         description: 'Mesin Sliding Gate otomatis kapasitas besar',
         image: 'foto/barrier gate/sliding.jpeg',
+        isDirectWa: true,
+        packages: []
+    },
+    {
+        id: 'swing_gate',
+        name: 'Swing Gate',
+        description: 'Motor Swing Gate otomatis untuk gerbang hunian',
+        image: 'foto/produk/swing gate.jpeg',
+        isDirectWa: true,
+        packages: []
+    },
+    {
+        id: 'ezviz',
+        name: 'Ezviz',
+        description: 'Smart Home Security Camera yang terpercaya dan mudah digunakan',
+        image: 'foto/logo/logo-393.webp',
         isDirectWa: true,
         packages: []
     }

@@ -920,7 +920,7 @@ textarea {
 
 /* ========== FOOTER ========== */
 .footer {
-  background: var(--color-dark);
+  background: linear-gradient(135deg, #a4dbf7 0%, #1c6ba2 100%);
   color: rgba(255, 255, 255, 0.7);
   padding: var(--space-3xl) 0 0;
 }
