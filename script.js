@@ -503,7 +503,7 @@ const staticBrandsData = [
         id: 'barrier_gate',
         name: 'Barrier Gate',
         description: 'Sistem Barrier Gate otomatis untuk parkir dan gerbang',
-        image: 'foto/barrier gate/barier.jpeg',
+        image: 'foto/produk/barriergate.jpeg',
         isDirectWa: true,
         packages: []
     },
