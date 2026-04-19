@@ -372,8 +372,8 @@ textarea {
   margin-top: var(--nav-height);
   position: relative;
   overflow: hidden;
-  background: var(--color-dark);
-  padding: var(--space-xl) var(--container-padding);
+  background: var(--color-white);
+  padding: var(--space-lg) var(--container-padding);
 }
 
 .slider {
@@ -381,11 +381,11 @@ textarea {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   aspect-ratio: 16/7;
   max-height: 600px;
-  background: linear-gradient(135deg, #a4dbf7 0%, #1c6ba2 100%);
+  background: transparent;
   overflow: hidden;
 }
 
