@@ -373,16 +373,16 @@ textarea {
   position: relative;
   overflow: hidden;
   background: var(--color-dark);
-  padding: 0;
+  padding: var(--space-xl) var(--container-padding);
 }
 
 .slider {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: var(--container-max);
   margin: 0 auto;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
   aspect-ratio: 16/7;
   max-height: 600px;
   background: linear-gradient(135deg, #a4dbf7 0%, #1c6ba2 100%);
