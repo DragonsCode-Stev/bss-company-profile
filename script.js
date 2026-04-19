@@ -23,7 +23,7 @@ const CONFIG = {
     keys: {
         products: 'bss_products',
         sliders: 'bss_sliders_v12',
-        portfolio: 'bss_portfolio_v2',
+        portfolio: 'bss_portfolio_v3',
         settings: 'bss_settings_v2',
         credentials: 'bss_admin_credentials',
         isLoggedIn: 'bss_admin_logged'
@@ -122,7 +122,10 @@ const DataManager = {
                 { id: 7, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.45.jpeg' },
                 { id: 8, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.48.jpeg' },
                 { id: 9, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.49.jpeg' },
-                { id: 10, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.50.jpeg' }
+                { id: 10, image: 'foto/bawah/WhatsApp Image 2026-04-13 at 20.26.50.jpeg' },
+                { id: 11, image: 'foto/bawah/WhatsApp Image 2026-04-16 at 15.51.31.jpeg' },
+                { id: 12, image: 'foto/bawah/WhatsApp Image 2026-04-18 at 09.42.46.jpeg' },
+                { id: 13, image: 'foto/bawah/Screenshot 2026-04-19 200829.png' }
             ]);
         }
 
