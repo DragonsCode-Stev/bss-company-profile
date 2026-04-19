@@ -462,30 +462,11 @@ textarea {
 }
 
 .slider-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
+  display: none;
 }
 
 .slider-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all var(--transition-base);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-.slider-dot.active {
-  background: var(--color-white);
-  width: 32px;
-  border-radius: var(--radius-full);
-  border-color: var(--color-white);
+  display: none;
 }
 
 /* ========== SECTIONS ========== */
